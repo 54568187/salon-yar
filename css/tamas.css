@@ -1,0 +1,86 @@
+/* پس‌زمینه کلی صفحه */
+body {
+    font-family: Dana;
+    background: #f3f4f6;
+    margin: 0;
+    line-height: 1.8;
+    direction: rtl;
+  }
+  
+  /* باکس اصلی */
+  .contact-box {
+    width: 90%;
+    max-width: 720px;
+    background: #ffffff;
+    padding: 35px 40px;
+    margin: auto;
+    margin-top: 6rem;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+  }
+  
+  /* عنوان */
+  .contact-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  /* نقطه سبز + هاله */
+  .green-dot {
+    width: 12px;
+    height: 12px;
+    background: #2684ff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(39, 179, 214, 0.18);
+  }
+  
+  /* تیتر */
+  .title {
+    font-size: 23px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  /* متن توضیحی */
+  .desc {
+    font-size: 15.5px;
+    color: #555;
+    margin: 10px 0 25px 0;
+    line-height: 1.9;
+  }
+  
+  /* لیست اطلاعات */
+  .info-list {
+    padding-right: 22px;
+    padding-left: 0;
+    margin: 0;
+    list-style: disc;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .info-list li {
+    margin-bottom: 12px;
+  }
+  
+  /* ریسپانسیو موبایل */
+  @media (max-width: 480px) {
+    .contact-box {
+      padding: 28px 22px;
+      border-radius: 12px;
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .desc {
+      font-size: 14.5px;
+    }
+  
+    .info-list {
+      font-size: 15px;
+    }
+  }
