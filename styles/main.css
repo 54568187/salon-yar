@@ -314,3 +314,12 @@ h1{
     filter: grayscale(100%) brightness(2.3) contrast(2);
     margin-bottom: 0.2%;
 }
+.home{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+.login{
+    margin-top: 0.25%;
+}
