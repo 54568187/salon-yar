@@ -6,7 +6,6 @@
     --bcg-more: #EEEEEE;
     --color-more: #45556C;
     --color-reserved: #62748E;
-    /* متغیر عرض محتوا برای یکپارچگی */
     --content-width: 1300px;
 }
 
@@ -27,27 +26,26 @@ body {
     overflow-x: hidden;
 }
 
-/* --- باکس جستجوی بالا --- */
+
 .for-flex-search {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    padding: 0 20px; /* فاصله ایمن از کناره‌ها */
+    padding: 0 20px; 
 }
 
 .search {
     width: 100%;
-    max-width: var(--content-width); /* محدودیت عرض */
-    /* ارتفاع ثابت رو برداشتم، جاش پدینگ دادم */
+    max-width: var(--content-width); 
     min-height: 150px; 
     height: auto;
     background-color: #fff;
     border-radius: 6px;
     display: flex;
-    justify-content: space-around; /* پخش کردن آیتم‌ها */
+    justify-content: space-around; 
     align-items: center;
-    flex-wrap: wrap; /* ریسپانسیو: شکستن خط */
+    flex-wrap: wrap; 
     padding: 20px;
     gap: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -57,18 +55,18 @@ option, select {
     font-family: Dana;
 }
 
-/* استایل مشترک برای بخش‌های جستجو */
+
 .place-type, .city-main-name, .days-week, .time-range {
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 80px;
     padding: 0 15px;
-    flex: 1; /* تقسیم فضای موجود به صورت مساوی */
-    min-width: 150px; /* حداقل عرض */
+    flex: 1; 
+    min-width: 150px; 
 }
 
-/* خط چین بین آیتم‌ها (فقط برای دسکتاپ) */
+
 .place-type:not(:last-child), 
 .city-main-name, 
 .days-week, 
@@ -76,16 +74,16 @@ option, select {
     border-left: 1px dashed rgb(194, 194, 194);
 }
 
-/* حذف خط چین در موبایل */
+
 @media (max-width: 900px) {
     .place-type, .city-main-name, .days-week, .time-range {
         border-left: none !important;
         border-bottom: 1px dashed rgb(194, 194, 194);
-        width: 100%; /* تمام عرض در موبایل */
-        align-items: center; /* وسط چین */
+        width: 100%; 
+        align-items: center; 
     }
     .search {
-        flex-direction: column; /* ستونی شدن */
+        flex-direction: column; 
     }
 }
 
@@ -93,13 +91,13 @@ option, select {
     height: 30px;
     border: none;
     font-size: 18px;
-    width: 100%; /* پر کردن عرض والد */
+    width: 100%; 
     background: transparent;
 }
 
-/* عنوان‌ها */
+
 h3 {
-    margin: 0 0 10px 0; /* حذف مارجین‌های عجیب */
+    margin: 0 0 10px 0; 
     font-size: 16px;
     color: #666;
 }
@@ -116,7 +114,7 @@ h3 {
     border-radius: 5px;
     cursor: pointer;
     transition: all 200ms ease-in-out;
-    white-space: nowrap; /* جلوگیری از شکستن متن دکمه */
+    white-space: nowrap; 
     flex-shrink: 0;
 }
 
@@ -124,7 +122,7 @@ h3 {
     background-color: #2d9fe0;
 }
 
-/* --- بخش محتوای اصلی (کارت‌ها) --- */
+
 .main-content-flex {
     display: flex;
     justify-content: center;
@@ -134,18 +132,17 @@ h3 {
 
 .main-content {
     display: flex;
-    align-items: stretch; /* هم‌ارتفاع کردن کارت‌ها */
+    align-items: stretch; 
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; /* ریسپانسیو: شکستن خط */
+    flex-wrap: wrap; 
     width: 100%;
     max-width: var(--content-width);
 }
 
 .card {
-    /* عرض ثابت حذف شد */
     width: 380px; 
-    max-width: 100%; /* تو موبایل از صفحه نزنه بیرون */
+    max-width: 100%; 
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -210,12 +207,12 @@ h3 {
 }
 
 .reserve {
-    flex: 1; /* پر کردن فضای مساوی */
+    flex: 1; 
     height: 80px;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    overflow: hidden; /* گوشه‌های تیز رو میبره */
+    overflow: hidden; 
     cursor: pointer;
 }
 
@@ -225,7 +222,7 @@ h3 {
     height: 50%;
     display: flex;
     align-items: center;
-    justify-content: center; /* وسط چین کامل */
+    justify-content: center; 
     color: #fff;
     font-size: 14px;
 }
@@ -236,13 +233,13 @@ h3 {
     height: 50%;
     display: flex;
     align-items: center;
-    justify-content: center; /* وسط چین کامل */
+    justify-content: center; 
     color: #fff;
     font-size: 14px;
 }
 
 .btn {
-    display: block; /* تمام عرض */
+    display: block; 
     width: 100%;
     padding: 12px 0;
     background-color: var(--bcg-more);
@@ -251,7 +248,7 @@ h3 {
     text-decoration: none;
     font-family: Dana;
     font-size: 16px;
-    margin-top: 20px; /* فاصله از بالا */
+    margin-top: 20px; 
     text-align: center;
     transition: background 0.2s;
 }
@@ -260,7 +257,6 @@ h3 {
     background-color: #e0e0e0;
 }
 
-/* رنگ‌های وضعیت رزرو */
 .top__reserved {
     background-color: var(--color-reserved);
 }
@@ -269,5 +265,5 @@ h3 {
     background-color: #45556C;
 }
 
-/* اصلاح مارجین‌ها و پدینگ‌های اضافی متن‌ها */
+
 p { margin: 0; }

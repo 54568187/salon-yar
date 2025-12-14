@@ -8,7 +8,7 @@
     --color-more: #45556C;
     --color-reserved: #62748E;
     --rate: #FDCB5C;
-    /* متغیر عرض محتوا */
+
     --content-width: 1300px;
 }
 
@@ -29,51 +29,49 @@ body {
     overflow-x: hidden;
 }
 
-/* کانتینر اصلی صفحه */
 .main2 {
     display: flex;
     justify-content: center;
     width: 100%;
-    /* ارتفاع ثابت حذف شد، چون محتوا ممکنه زیاد باشه */
     min-height: 80vh; 
     margin-top: 20px;
-    padding: 0 15px; /* فاصله ایمن در موبایل */
+    padding: 0 15px; 
 }
 
-/* محتوای داخلی */
+
 .main {
     width: 100%;
     max-width: var(--content-width);
     display: flex;
     flex-direction: column;
-    gap: 20px; /* فاصله یکسان بین بخش‌ها */
+    gap: 20px; 
 }
 
 .foot {
     margin-top: 40px;
 }
 
-/* --- باکس بالای صفحه --- */
+
 .top-box {
     background-color: #fff;
     width: 100%;
-    /* ارتفاع ثابت حذف شد تا فلکس کار کنه */
+
     min-height: 8.5rem; 
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    flex-wrap: wrap; /* ریسپانسیو: شکستن خط */
+    flex-wrap: wrap; 
     gap: 20px;
 }
 
 .right-part {
     display: flex;
     align-items: center;
-    /* width: 60% رو برداشتم، جاش flex: 1 */
+ 
     flex: 2; 
-    min-width: 300px; /* حداقل عرض */
+    min-width: 300px;
     gap: 20px;
 }
 
@@ -97,7 +95,7 @@ body {
 .flex {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* آدرس طولانی نشکنه */
+    flex-wrap: wrap; 
     gap: 10px;
 }
 
@@ -120,7 +118,7 @@ body {
 .rate__tex {
     font-size: 17px;
     color: white;
-    margin-top: 4px; /* اصلاح تراز عمودی */
+    margin-top: 4px; 
 }
 
 .location {
@@ -132,13 +130,12 @@ body {
     font-size: 14px;
 }
 
-/* بخش چپ (دکمه) */
+
 .left-part {
-    /* width: 40% رو حذف کردم */
     flex: 1;
     min-width: 250px;
     display: flex;
-    justify-content: flex-end; /* دکمه بره سمت چپ */
+    justify-content: flex-end; 
 }
 
 .for-flex {
@@ -150,7 +147,7 @@ body {
 .watch_info {
     background: var(--bcg);
     width: 100%;
-    max-width: 280px; /* محدود کردن عرض دکمه */
+    max-width: 280px; 
     height: 4.5rem;
     border-radius: 50px;
     display: flex;
@@ -182,13 +179,13 @@ body {
     font-size: 16px;
 }
 
-/* --- بخش بلور (عکس‌های وسط) --- */
+
 .section-blur {
     width: 100%;
-    height: 15rem; /* ارتفاع پایه */
+    height: 15rem; 
     display: flex;
     border-radius: 5px;
-    overflow: hidden; /* گوشه‌های گرد برای کل بخش */
+    overflow: hidden; 
 }
 
 .blur-box {
@@ -205,7 +202,7 @@ body {
     transform: scale(1.1);
 }
 
-/* اصلاح بلور */
+
 .image__blur img {
     filter: blur(5px) brightness(0.7);
 }
@@ -214,7 +211,7 @@ body {
     filter: blur(5px) brightness(0.8);
 }
 
-/* متن‌های روی عکس */
+
 .hour, .hour__number {
     position: absolute;
     inset: 0;
@@ -223,7 +220,7 @@ body {
     justify-content: center;
     color: white;
     text-align: center;
-    pointer-events: none; /* کلیک از روش رد بشه */
+    pointer-events: none; 
     z-index: 2;
 }
 
@@ -245,10 +242,10 @@ body {
     margin-bottom: 4rem;
 }
 
-/* دکمه رزرو وسط عکس */
+
 .reserve {
     position: absolute;
-    top: 60%; /* پوزیشن نسبی */
+    top: 60%;
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--rate);
@@ -256,11 +253,11 @@ body {
     border-radius: 5rem;
     font-size: 1.1rem;
     text-decoration: none;
-    color: #000; /* رنگ متن دکمه */
+    color: #000; 
     white-space: nowrap;
     transition: all 300ms ease-in-out;
     z-index: 3;
-    pointer-events: auto; /* دکمه قابل کلیک باشه */
+    pointer-events: auto; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -270,18 +267,17 @@ body {
     filter: brightness(0.8);
 }
 
-/* --- گرید کارت‌های تاریخ --- */
+
 .date-boxes {
     display: grid;
-    /* این خط جادوییه: کارت‌ها رو خودش میچینه، حداقل عرض هر کارت 280 پیکسل */
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 }
 
 .card {
     background-color: #fff;
-    width: 100%; /* عرض کامل سلول گرید */
-    height: 160px; /* ارتفاع متناسب */
+    width: 100%; 
+    height: 160px; 
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -307,7 +303,7 @@ body {
     color: black;
     background-color: #e9e9e9;
     padding: 10px 0;
-    width: 80%; /* عرض دکمه */
+    width: 80%; 
     text-align: center;
     border-radius: 5px;
     transition: all 300ms ease-in-out;
@@ -330,9 +326,9 @@ body {
     pointer-events: none;
 }
 
-/* --- مدیا کوئری برای موبایل --- */
+
 @media (max-width: 768px) {
-    /* باکس بالا */
+  
     .top-box {
         flex-direction: column;
         text-align: center;
@@ -362,21 +358,21 @@ body {
     }
     
     .watch_info {
-        margin-right: 0; /* حذف مارجین راست */
+        margin-right: 0; 
     }
 
-    /* بخش بلور */
+  
     .section-blur {
-        flex-direction: column; /* عکس‌ها زیر هم */
-        height: auto; /* ارتفاع اتوماتیک */
+        flex-direction: column; 
+        height: auto; 
     }
     
     .blur-box {
         width: 100%;
-        height: 200px; /* ارتفاع ثابت برای موبایل */
+        height: 200px; 
     }
     
-    /* اصلاح سایز متن در موبایل */
+   
     .hour { font-size: 1.2rem; margin-bottom: 2rem; }
     .hour__number { font-size: 2rem; margin-top: 2rem; }
     .reserve { 
