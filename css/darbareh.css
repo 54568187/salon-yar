@@ -1,74 +1,81 @@
-.cotainer{
-    width: 1216px;
-     margin: 0 auto;
-    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    border-radius: 10px;
-    margin-top: 6rem;
-}
+/* --- استایل‌های بدنه --- */
 body {
     margin: 0;
     font-family: "Vazirmatn", "IRANSans", Tahoma, sans-serif;
     background: #ffffff;
     color: #333;
     line-height: 1.8;
-  }
+}
 
-  .about-container {
+/* --- کانتینر اصلی (اصلاح شده برای ریسپانسیو) --- */
+.cotainer {
+    /* قبلا width: 1216px بود که باعث میشد تو موبایل اسکرول بخوره */
+    /* الان میگیم عرضت 90% صفحه باشه، ولی از 1216px بزرگتر نشو */
+    width: 90%; 
+    max-width: 1216px;
+    
+    margin: 6rem auto; /* وسط چین */
+    
+    /* استایل‌های ظاهری خودت (بدون تغییر) */
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+/* --- محتوای داخلی --- */
+.about-container {
     padding: 24px 18px;
-  }
+}
 
-
-  .about-title {
+.about-title {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 14px;
-  }
+}
 
-
-  .green-dot {
+.green-dot {
     width: 12px;
     height: 12px;
     background: #0eb3ff;
     border-radius: 50%;
-  }
+    flex-shrink: 0; /* جلوگیری از تغییر سایز دایره تو موبایل */
+}
 
-  
-  .about-text {
+.about-text {
     font-size: 14px;
     color: #4b5563;
     margin-bottom: 24px;
-  }
+    text-align: justify; /* پیشنهاد: متن مرتب‌تر دیده میشه */
+}
 
-
-  .benefits-title {
+.benefits-title {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 12px;
-  }
+}
 
- 
-  .benefits-list {
+.benefits-list {
     list-style: none;
     padding: 0;
     margin: 0;
     font-size: 14px;
     color: #4b5563;
-  }
+}
 
-  .benefits-list li {
-      margin-bottom: 23px;
+.benefits-list li {
+    margin-bottom: 23px;
     display: flex;
     align-items: flex-start;
     gap: 6px;
-  }
+}
 
-  .benefits-list li::before {
+.benefits-list li::before {
     content: "•";
     font-size: 18px;
     line-height: 20px;
     color: #000;
-  }
+    flex-shrink: 0; /* جلوگیری از به هم ریختن بولت پوینت‌ها */
+}

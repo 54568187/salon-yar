@@ -1,208 +1,206 @@
-:root{
-    --bcg : linear-gradient(to right,#009df8,#7aceff); 
-    --color : #45b9fc;
-    --color-2 : #51A2FF;
-    --color-3 : #0973b9;
-    --bcg-more : #EEEEEE;
-    --color-more : #45556C;
-    --color-reserved :#62748E;
+:root {
+    --bcg: linear-gradient(to right, #009df8, #7aceff);
+    --color: #45b9fc;
+    --color-2: #51A2FF;
+    --color-3: #0973b9;
+    --bcg-more: #EEEEEE;
+    --color-more: #45556C;
+    --color-reserved: #62748E;
+    /* متغیر عرض محتوا برای یکپارچگی */
+    --content-width: 1300px;
 }
+
 @font-face {
     font-family: Dana;
     src: url(/font/Dana-DemiBold.ttf);
 }
-*,
-*::after,
-*::before{
+
+*, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: #ececec;
     font-family: Dana;
+    overflow-x: hidden;
 }
-.for-flex-search{
+
+/* --- باکس جستجوی بالا --- */
+.for-flex-search {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
+    padding: 0 20px; /* فاصله ایمن از کناره‌ها */
 }
-.search{
-    width: 1290px;
-    height: 150px;
+
+.search {
+    width: 100%;
+    max-width: var(--content-width); /* محدودیت عرض */
+    /* ارتفاع ثابت رو برداشتم، جاش پدینگ دادم */
+    min-height: 150px; 
+    height: auto;
     background-color: #fff;
     border-radius: 6px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* پخش کردن آیتم‌ها */
     align-items: center;
+    flex-wrap: wrap; /* ریسپانسیو: شکستن خط */
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
-option,
-select{
+
+option, select {
     font-family: Dana;
 }
 
-.place-type{
+/* استایل مشترک برای بخش‌های جستجو */
+.place-type, .city-main-name, .days-week, .time-range {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border-left: 1px dashed rgb(194, 194, 194);
     height: 80px;
-    padding-left: 15px;
+    padding: 0 15px;
+    flex: 1; /* تقسیم فضای موجود به صورت مساوی */
+    min-width: 150px; /* حداقل عرض */
 }
-#menu-type{
+
+/* خط چین بین آیتم‌ها (فقط برای دسکتاپ) */
+.place-type:not(:last-child), 
+.city-main-name, 
+.days-week, 
+.time-range {
+    border-left: 1px dashed rgb(194, 194, 194);
+}
+
+/* حذف خط چین در موبایل */
+@media (max-width: 900px) {
+    .place-type, .city-main-name, .days-week, .time-range {
+        border-left: none !important;
+        border-bottom: 1px dashed rgb(194, 194, 194);
+        width: 100%; /* تمام عرض در موبایل */
+        align-items: center; /* وسط چین */
+    }
+    .search {
+        flex-direction: column; /* ستونی شدن */
+    }
+}
+
+#menu-type, #menu-city, #menu-days, #menu-time {
     height: 30px;
     border: none;
     font-size: 18px;
+    width: 100%; /* پر کردن عرض والد */
+    background: transparent;
 }
-.city-main-name{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-left: 1px dashed rgb(194, 194, 194);
-    height: 80px;
-    padding-left: 15px;
+
+/* عنوان‌ها */
+h3 {
+    margin: 0 0 10px 0; /* حذف مارجین‌های عجیب */
+    font-size: 16px;
+    color: #666;
 }
-#menu-city{
-    height: 30px;
-    border: none;
-    font-size: 18px;
-}
-.city{
-    width: 200px;
-}
-.days-week{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-left: 1px dashed rgb(194, 194, 194);
-    height: 80px;
-    padding-left: 15px;
-}
-#menu-days{
-    height: 30px;
-    border: none;
-    font-size: 18px;
-}
-.time-range{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-left: 1px dashed rgb(194, 194, 194);
-    height: 80px;
-    padding-left: 15px;
-}
-#menu-time{
-    height: 30px;
-    border: none;
-    font-size: 18px;
-}
-.search-btn{
+
+.place-text { margin-right: 0; }
+
+.search-btn {
     font-family: Dana;
-    padding: 15px 50px;
+    padding: 15px 40px;
     font-size: 18px;
     background-color: var(--color);
     border: none;
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 8px;
-    transition: all 200ms ease-in-out 50ms;
-}
-.search-btn:hover{
-    background-color: #2d9fe0;
-}
-h3{
-    margin-left: 180px;
-}
-.place-text,
-#menu-type{
-    margin-right: 30px;
+    transition: all 200ms ease-in-out;
+    white-space: nowrap; /* جلوگیری از شکستن متن دکمه */
+    flex-shrink: 0;
 }
 
-.main-content-flex{
+.search-btn:hover {
+    background-color: #2d9fe0;
+}
+
+/* --- بخش محتوای اصلی (کارت‌ها) --- */
+.main-content-flex {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 40px;
+    padding: 0 20px 40px;
 }
-.main-content{
+
+.main-content {
     display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 45px;
+    align-items: stretch; /* هم‌ارتفاع کردن کارت‌ها */
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* ریسپانسیو: شکستن خط */
+    width: 100%;
+    max-width: var(--content-width);
 }
-.card{
-    width: 400px;
-    height: 310px;
+
+.card {
+    /* عرض ثابت حذف شد */
+    width: 380px; 
+    max-width: 100%; /* تو موبایل از صفحه نزنه بیرون */
     background-color: #fff;
     display: flex;
     flex-direction: column;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
 }
-.top-card{
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.top-card {
     display: flex;
+    align-items: center;
+    gap: 15px;
 }
-.top-card-texts{
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-}
-.price{
-    color: gray;
-    margin-bottom: 10px;
-}
-.photo-stadium{
+
+.photo-stadium {
     width: 90px;
     height: 90px;
-    border-radius: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
 }
-.bottom-card{
-    display: flex;
-    flex-direction: row;
-    gap: 25px;
-}
-.stadium-name{
-    font-size: 19px;
-    margin-right: -20px;
-}
-.reserve{
-    width: 160px;
-    height: 80px;
+
+.top-card-texts {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin-top: 30px;
-    margin-right: 2%;
-    cursor: pointer;
 }
-.top-reserve{
-    background-color:var(--color-2) ;
+
+.clock {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.price {
+    color: gray;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.stadium-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.bottom-card {
+    margin-top: 20px;
     width: 100%;
-    height: 50%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    padding-right: 23%;
-    padding-top: 5%;
-    color: #fff;
 }
-.main-reserve{
-    background-color: var(--color-3);
-    width: 100%;
-    height: 50%;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    padding-right: 32%;
-    color: #fff;
-}
+
 .reserve-link {
     display: flex;
     align-items: center;
@@ -211,22 +209,65 @@ h3{
     text-decoration: none;
 }
 
+.reserve {
+    flex: 1; /* پر کردن فضای مساوی */
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    overflow: hidden; /* گوشه‌های تیز رو میبره */
+    cursor: pointer;
+}
+
+.top-reserve {
+    background-color: var(--color-2);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* وسط چین کامل */
+    color: #fff;
+    font-size: 14px;
+}
+
+.main-reserve {
+    background-color: var(--color-3);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* وسط چین کامل */
+    color: #fff;
+    font-size: 14px;
+}
+
 .btn {
-    display: inline-block;
-    padding: 12px 25px;
+    display: block; /* تمام عرض */
+    width: 100%;
+    padding: 12px 0;
     background-color: var(--bcg-more);
     color: var(--color-more);
     border-radius: 5px;
     text-decoration: none;
     font-family: Dana;
     font-size: 16px;
-    margin-top: 4%;
+    margin-top: 20px; /* فاصله از بالا */
     text-align: center;
+    transition: background 0.2s;
 }
-.top__reserved{
-background-color: var(--color-reserved);
+
+.btn:hover {
+    background-color: #e0e0e0;
 }
-.main__reserved{
+
+/* رنگ‌های وضعیت رزرو */
+.top__reserved {
+    background-color: var(--color-reserved);
+}
+
+.main__reserved {
     background-color: #45556C;
-    padding-right: 26%;
 }
+
+/* اصلاح مارجین‌ها و پدینگ‌های اضافی متن‌ها */
+p { margin: 0; }
