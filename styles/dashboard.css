@@ -1,0 +1,260 @@
+:root {
+    --bcg: linear-gradient(to right, #009df8, #7aceff);
+    --color-blue: #51A2FF;
+    --text-color: #333;
+    --bg-gray: #f5f5f5;
+    --border-radius: 8px;
+    --content-width: 1300px;
+}
+
+body {
+    background-color: var(--bg-gray);
+}
+
+.dashboard-main {
+    width: 100%;
+    min-height: 80vh;
+    padding: 30px 15px;
+    padding-bottom: 0;
+}
+
+.dashboard-container {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+}
+
+
+.dashboard-sidebar {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.profile-card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.avatar-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--color-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    color: #888;
+}
+
+.avatar-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.user-name {
+    margin: 0 0 5px 0;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.user-phone {
+    margin: 0;
+    color: #666;
+    font-size: 1rem;
+    font-family: sans-serif; 
+}
+
+
+.menu-card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.menu-list {
+    list-style: none;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #444;
+    transition: all 0.2s;
+}
+
+.menu-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.menu-item:hover a {
+    background-color: #f9f9f9;
+    color: var(--color-blue);
+}
+
+
+.menu-item.active a {
+    color: var(--color-blue);
+    font-weight: bold;
+}
+
+
+/* .menu-item.active::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: var(--color-blue);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+} */
+
+.menu-item.logout a {
+    color: #666;
+    margin-top: 5px;
+    border-top: 1px solid #eee;
+}
+
+.menu-item.logout:hover a {
+    color: #d32f2f;
+    background-color: #fff5f5;
+}
+
+
+.dashboard-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.info-banner {
+    background: var(--bcg);
+    border-radius: var(--border-radius);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 157, 248, 0.2);
+}
+
+.banner-btn {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.banner-btn:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+.stats-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.stat-card {
+    flex: 1;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    overflow: hidden; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.stat-icon-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    color: #333;
+}
+
+.stat-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+}
+
+.stat-btn {
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--color-blue);
+    color: #fff;
+    font-size: 14px;
+    transition: filter 0.2s;
+}
+
+.stat-btn:hover {
+    filter: brightness(0.9);
+}
+
+.foot{
+    margin-top: 0;
+}
+@media (max-width: 900px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .dashboard-sidebar {
+        width: 100%;
+    }
+    .info-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .stats-grid {
+        flex-direction: column;
+    }
+    .dashboard-content{
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+    }
+}
