@@ -1,0 +1,297 @@
+:root {
+    --bcg: linear-gradient(to right, #009df8, #7aceff);
+    /* عرض محتوای سایت */
+    --content-width: 1300px;
+}
+
+@font-face {
+    font-family: Dana;
+    src: url(/font/Dana-DemiBold.ttf);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ececec;
+    font-family: Dana;
+    overflow-x: hidden;
+}
+.main-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    font-family: 'Dana', Tahoma, sans-serif;
+    direction: rtl;
+}
+
+/* --- استایل‌های بنر --- */
+.banner-section {
+    margin-top: 20px;
+    position: relative;
+    /* این مارجین منفی باعث می‌شود باکس جستجو روی بنر بیاید */
+    margin-bottom: -50px; 
+    z-index: 1;
+}
+
+.banner-container {
+    background: var(--bcg); /* گرادینت بنفش تیره */
+    height: 280px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.banner-content h1 {
+    font-size: 36px;
+    z-index: 10;
+    position: relative;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* اشکال هندسی پس‌زمینه بنر (مثل عکس) */
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+}
+.shape-1 { width: 150px; height: 150px; top: -30px; right: -30px; }
+.shape-2 { width: 80px; height: 80px; bottom: 40px; left: 10%; background: rgba(0, 0, 0, 0.1); }
+.shape-3 { width: 20px; height: 20px; top: 40px; left: 30%; background: #080c22; opacity: 0.8; }
+
+
+/* --- استایل‌های بخش جستجو --- */
+.search-section {
+    margin: 0 auto;
+    margin-bottom: 60px;
+    margin-top: 4rem;
+}
+
+.search-tabs-container {
+    display: flex;
+    gap: 5px;
+    padding-right: 10px;
+}
+
+.search-tab {
+    background-color: #f5f5f5; /* رنگ پیش‌فرض تب غیرفعال */
+    color: #777;
+    padding: 10px 25px;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.search-tab.active {
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+/* اصلاحات روی کد جستجوی شما برای هماهنگی با طرح */
+.search {
+    width: 100%;
+    max-width: 100%; /* پر کردن عرض */
+    background-color: #fff;
+    border-radius: 10px;
+    border-top-right-radius: 0; /* چسبیدن به تب */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    font-family: Dana;
+}
+
+.place-type, .city-main-name, .days-week, .time-range {
+    border-left: 1px dashed #ddd;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+}
+.time-range { border-left: none; }
+
+.search h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    color: #888;
+    font-weight: normal;
+}
+
+.search select {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    width: 100%;
+    cursor: pointer;
+    font-family: Dana;
+}
+
+.search-btn {
+    background-color: #26a1ff; /* آبی روشن مشابه عکس */
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(110, 183, 240, 0.4);
+    transition: 0.3s;
+    font-family: Dana;
+}
+.search-btn:hover {
+    background-color: #0084ff;
+}
+
+/* ریسپانسیو بخش جستجو */
+@media (max-width: 900px) {
+    .search { flex-direction: column; height: auto; }
+    .place-type, .city-main-name, .days-week, .time-range {
+        width: 100%; border-left: none; border-bottom: 1px dashed #ddd; padding: 15px 0;
+    }
+    .banner-section { margin-bottom: 0; }
+    .search-section { margin-top: -20px; }
+}
+
+
+/* --- استایل‌های لیست کارت‌ها --- */
+.venues-list {
+    margin-bottom: 80px;
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    padding: 0 10px;
+}
+
+.section-title-box h2 {
+    font-size: 24px;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+.section-title-box .subtitle {
+    font-size: 12px;
+    color: #999;
+}
+
+.btn-more {
+    background-color: #ffffff;
+    color: #666;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.btn-more:hover {
+    background-color: #e1e1e1;
+    color: #333;
+}
+
+/* گرید کارت‌ها */
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 25px;
+}
+
+.venue-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.venue-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card-img {
+    height: 190px;
+    width: 100%;
+    position: relative;
+    background-color: #ddd;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0,0,0,3) 0%, transparent 100%);
+    color: #fff;
+}
+
+.img-overlay h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.img-overlay .price {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.card-details {
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: #888;
+    font-size: 12px;
+}
+
+.detail-item i {
+    font-size: 16px;
+    color: #aaa;
+}
+
+.star-icon{
+    width: 15px;
+}
+.gen-icon{
+    width: 18px;
+}
+.loc-icon{
+    width: 17px;
+}

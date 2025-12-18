@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <title>سالن یار - رزرو اماکن ورزشی</title>
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <div class="top-head">
+                <div class="head-menu">
+                    <a class="link-item" href="faq.html">سوالات متداول</a>
+                    <a class="link-item" href="darbareh.html">درباره ما</a>
+                    <a class="link-item" href="tamas.html"> تماس با ما</a>
+                    <a class="link-item" href="#">فرآیند خرید</a>
+                </div>
+                <div class="ques-head">
+                    <a class="link-item ques" href="#">مجموعه ورزشی دارید؟</a>
+                    <a class="link-item ques" href="#">پیگیری خرید</a>
+                </div>
+            </div>
+            <div class="bottom-head">
+                <div class="logo">
+                    <a class="home" href="#">
+                        <img class="logo-icon" src="./images/stadium.jpg" alt="">
+                        <h1>سالن‌ یار</h1>
+                    </a>
+                </div>
+
+                <div class="login">
+                    <div class="child-login">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="login-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+                        </svg>
+                        <a class="login-link" href="sabtenam.html">
+                            <span>ثبت نام</span>
+                            <span>/</span>
+                            <span>ورود</span>
+                        </a>
+                    </div>
+                    <div class="number">
+                        <p class="number-main">025-32689439</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+
+        <!-- بخش بنر -->
+        <section class="banner-section">
+            <div class="banner-container">
+                <div class="banner-content">
+                    <h1>جستجو و خرید سریع سانس</h1>
+                </div>
+                <!-- اشکال هندسی تزیینی پس‌زمینه بنر -->
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </section>
+
+        <!-- بخش جستجو (شامل تب‌ها و کد جستجوی شما) -->
+        <section class="search-section">
+            <!-- تب‌های بالای باکس جستجو -->
+            <div class="search-tabs-container">
+                <div class="search-tab active">
+                    <i class="fa fa-calendar-alt"></i>
+                    جستجوی سانس
+                </div>
+                <div class="search-tab">
+                    <i class="fa fa-building"></i>
+                    جستجو در اماکن
+                </div>
+            </div>
+
+            <!-- همان کد جستجوی شما -->
+            <div class="search">
+                <div class="place-type">
+                    <h3 class="place-text">نوع مکان</h3>
+                    <select name="type" id="menu-type">
+                        <option value="salon">سالن</option>
+                    </select>
+                </div>
+                <div class="city-main-name">
+                    <h3 class="city-text-name">در شهرِ</h3>
+                    <select name="city" id="menu-city">
+                        <option value="qom">قم</option>
+                    </select>
+                </div>
+                <div class="days-week">
+                    <h3 class="day-text">روزِ هفته</h3>
+                    <select name="day" id="menu-days">
+                        <option value="shanbe">شنبه</option>
+                        <option value="yekshanbe">یکشنبه</option>
+                        <option value="doshanbe">دوشنبه</option>
+                        <option value="seshanbe">سه شنبه</option>
+                        <option value="chaharshanbe">چهارشنبه</option>
+                        <option value="panjshanbe">پنجشنبه</option>
+                        <option value="jomee">جمعه</option>
+                    </select>
+                </div>
+                <div class="time-range">
+                    <h3 class="range-text">بازه زمانی</h3>
+                    <select name="time" id="menu-time">
+                        <option value="morning">صبح</option>
+                        <option value="noon">ظهر</option>
+                        <option value="afternoon">بعد از ظهر</option>
+                        <option value="evening">عصر</option>
+                        <option value="night">شب</option>
+                    </select>
+                </div>
+                <button class="search-btn">جستجو کن ! </button>
+            </div>
+        </section>
+
+        <!-- بخش کارت‌های اماکن ورزشی -->
+        <section class="venues-list">
+            <div class="section-head">
+                <div class="section-title-box">
+                    <h2>اماکن ورزشی قم</h2>
+                    <span class="subtitle">برخی از اماکن ورزشی ثبت شده در شهر قم</span>
+                </div>
+                <a href="#" class="btn-more">بیشتر ></a>
+            </div>
+
+            <div class="cards-wrapper">
+                <!-- کارت 1 -->
+                <div class="venue-card">
+                    <div class="card-img">
+                        <img src="/images/62579578.jpg" alt="سالن حیدریان">
+                        <div class="img-overlay">
+                            <h4>سالن حیدریان</h4>
+                            <span class="price">شروع قیمت از 600,000 تومان</span>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <img class="loc-icon" src="/images/free-location-icon-2952-thumb.png" alt="">
+
+                            <span>قم</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa fa-running"></i>
+                            <img class="gen-icon" src="/images/gender icon.png" alt="">
+                            <span>آقایان</span>
+                        </div>
+                        <div class="detail-item">
+                            <img class="star-icon" src="/images/dige-main.png" alt="">
+
+                            <span>5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- کارت 2 -->
+                <div class="venue-card">
+                    <div class="card-img">
+                        <img src="/images/34re343.jpg" alt="چمن مصنوعی">
+                        <div class="img-overlay">
+                            <h4> سالن هدایتی </h4>
+                            <span class="price">شروع قیمت از 450,000 تومان</span>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <img class="loc-icon" src="/images/free-location-icon-2952-thumb.png" alt="">
+
+                            <span>قم</span>
+                        </div>
+                        <div class="detail-item"> <img class="gen-icon" src="/images/gender icon.png" alt="">
+
+                            <span>آقایان</span>
+                        </div>
+                        <div class="detail-item">
+                            <img class="star-icon" src="/images/dige-main.png" alt="">
+
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- کارت 3 -->
+                <div class="venue-card">
+                    <div class="card-img">
+                        <img src="/images/javad ol aemah.jpg" alt="سالن تختی">
+                        <div class="img-overlay">
+                            <h4>سالن جوادالامه</h4>
+                            <span class="price">شروع قیمت از 500,000 تومان</span>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <img class="loc-icon" src="/images/free-location-icon-2952-thumb.png" alt="">
+
+                            <span>قم</span>
+                        </div>
+                        <div class="detail-item"> <img class="gen-icon" src="/images/gender icon.png" alt="">
+
+                            <span> آقایان و بانوان</span>
+                        </div>
+                        <div class="detail-item">
+                            <img class="star-icon" src="/images/dige-main.png" alt="">
+                            <span>4.2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- کارت 4 -->
+                <div class="venue-card">
+                    <div class="card-img">
+                        <img src="/images/00-1024x683.jpg" alt="مجموعه مریم">
+                        <div class="img-overlay">
+                            <h4>سالن کاطمی</h4>
+                            <span class="price">شروع قیمت از 600,000 تومان</span>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <img class="loc-icon" src="/images/free-location-icon-2952-thumb.png" alt="">
+                            <span>قم</span>
+                        </div>
+                        <div class="detail-item"> <img class="gen-icon" src="/images/gender icon.png" alt="">
+
+                            <span>بانوان</span>
+                        </div>
+                        <div class="detail-item">
+                            <img class="star-icon" src="/images/dige-main.png" alt="">
+
+                            <span>5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="foot">
+
+            <div class="discription-1">
+                <div class="support">
+                    <h3 class="support-text">
+                        ساعت پاسخگویی و پشتیبانی <span class="black">مرجع رزرو و اجاره اماکن ورزشی (سالن‌ یار)</span>،
+                        از 8 صبح تا 12:30 بامداد
+                    </h3>
+                    <div class="number-footer">
+                        <p class="number-footer-main">
+                            <span class="color-num">025</span>-32689439
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="discirption-2">
+                <div class="content-dis-2">
+                    <div class="city_are">
+                        <h3 class="city-text">شهر های تحت پوشش</h3>
+                    </div>
+                    <div class="city-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="city-icon-main">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5" />
+                        </svg>
+                    </div>
+                    <div class="city-name">
+                        <p class="qom">قم</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- بخش اصلاح‌شده -->
+            <div class="discription-3">
+                <div class="footer-sections">
+
+                    <!-- ستون اول -->
+                    <div class="footer-box">
+                        <div class="green-line"></div>
+                        <div class="first-text">
+                            <h3>سالن یار چیست؟</h3>
+                            <p class="first-main-text">
+                                سالن یار راهکاری سریع و آنلاین برای رزرو و اجاره اماکن ورزشی–تفریحی در سطح کشور می‌
+                                آفریند است.
+
+                                آغاز نموده است.
+
+                                ما مفتخریم که امکان رزرو و اجاره اماکن ورزشی را به صورت سریع و آسان و بدون
+                                پرداخت هیچگونه هزینه اضافی برای تمام ورزش‌کاران و ورزش‌ دوستان گرامی فراهم
+                                نماییم.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ستون دوم -->
+                    <div class="footer-box aa">
+                        <div class="purple-line"></div>
+                        <div class="twice-text">
+                            <h3>اطلاعات</h3>
+                            <a href="darbareh.html" class="information for-height">درباره ما</a>
+                            <a href="#" class="information for-height">شرایط و قوانین</a>
+                            <a href="#" class="information for-height">مناطق تحت پوشش</a>
+                            <a href="#" class="information for-height">دایرکتوری</a>
+                        </div>
+                    </div>
+
+                    <!-- ستون سوم -->
+                    <div class="footer-box bb">
+                        <div class="yellow-line"></div>
+                        <div class="third-text">
+                            <h3>کاربران</h3>
+                            <a href="#" class="users for-height">ثبت مکان ورزشی</a>
+                            <a href="tamas.html" class="users for-height">سوالات متداول</a>
+                            <a href="tamas.html" class="users for-height">تماس با ما</a>
+                            <a href="#" class="users for-height">فرایند خرید</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="discription-4">
+                <div class="final-sum">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="copyright">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+
+                    <p class="final-sum-text">تمامی حقوق برای سالن یار محفوظ است</p>
+                </div>
+                <div class="final-icons">
+                    <img src="./images/enamad_icon__text_color_blue_1024.png" alt="enemad" class="enemad">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

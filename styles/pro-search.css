@@ -163,6 +163,7 @@ body {
     transition: transform 0.2s;
     height: auto; 
 }
+
 .card:hover {
     transform: translateY(-2px);
 }
