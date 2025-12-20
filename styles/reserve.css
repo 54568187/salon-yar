@@ -1,0 +1,1240 @@
+:root {
+    --primary-blue: #009df8;
+    --text-dark: #333;
+    --text-light: #888;
+    --bg-white: #fff;
+    --bg-gray: #f9f9f9;
+    --border-color: #e0e0e0;
+    --green-available: #2e7d32;
+    --red-reserved: #d32f2f;
+    --rating-bg: #ffc107;
+    /* رنگ زرد امتیاز */
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.venue-page-main {
+    width: 100%;
+    padding: 20px 15px 40px;
+}
+
+.venue-page-container {
+    max-width: 1200px;
+    /* عرض اصلی محتوا */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    /* سایدبار میاد راست */
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* --- ستون اصلی (محتوا) --- */
+.venue-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    min-width: 0;
+}
+
+.venue-header,
+.venue-details,
+.reservation-section,
+.suggested-venues {
+    background-color: var(--bg-white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* --- هدر محتوا --- */
+.venue-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.venue-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 15px;
+    color: var(--text-light);
+}
+
+.venue-breadcrumbs a {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.venue-breadcrumbs p {
+    margin: 0;
+}
+
+.header-main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.venue-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+}
+
+.venue-rating {
+    background-color: var(--rating-bg);
+    color: var(--text-dark);
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-right h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.blue-button {
+    background-color: var(--primary-blue);
+    color: #fff;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* --- بقیه استایل‌ها --- */
+.venue-gallery {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 0 0 180px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.venue-details h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.venue-details p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.venue-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.feature-tag {
+    background-color: #333;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.feature-tag.more {
+    background-color: #555;
+}
+
+.reservation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.reservation-header h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.reservation-header p {
+    font-size: 13px;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.calendar-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.calendar-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.reservation-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.reservation-table th,
+.reservation-table td {
+    padding: 12px 8px;
+    border: 1px solid var(--border-color);
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.reservation-table th {
+    background-color: var(--bg-gray);
+}
+
+.reservation-table th span {
+    font-size: 11px;
+    color: var(--text-light);
+    font-weight: normal;
+}
+
+.reservation-table td:first-child {
+    font-weight: bold;
+    background-color: var(--bg-gray);
+}
+
+.unavailable {
+    color: var(--text-light);
+}
+
+.reserved {
+    background-color: #ffebee;
+    color: var(--red-reserved);
+    font-weight: bold;
+}
+
+.available {
+    color: var(--green-available);
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+    border-radius: 4px;
+    transition: background 0.2s;
+    background-color: #e8f5e9;
+}
+
+.available:hover {
+    background-color: #c8e6c9;
+}
+
+.table-legend {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-top: 10px;
+    color: var(--text-light);
+}
+
+.table-legend a {
+    color: var(--primary-blue);
+}
+
+.suggested-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.suggested-header h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.suggested-header a {
+    font-size: 13px;
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.suggested-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.venue-card {
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+}
+
+.venue-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.venue-card-body {
+    padding: 10px;
+}
+
+.venue-card h4 {
+    font-size: 14px;
+    margin: 0 0 5px 0;
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+/* --- سایدبار (راست) --- */
+.venue-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar-box {
+    background-color: var(--bg-white);
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 14px;
+    border-right: 3px solid transparent;
+    transition: all 0.2s;
+}
+
+.sidebar-nav a:hover {
+    background-color: var(--bg-gray);
+    border-right-color: #ccc;
+}
+
+.sidebar-nav a.active {
+    font-weight: bold;
+    color: var(--primary-blue);
+    border-right-color: var(--primary-blue);
+}
+
+/* --- ریسپانسیو --- */
+@media (max-width: 1024px) {
+    .venue-page-container {
+        flex-direction: column;
+        /* سایدبار میاد بالا */
+    }
+
+    .venue-sidebar {
+        position: static;
+        width: 100%;
+        order: -1;
+        /* سایدبار بره بالای همه */
+    }
+
+    .sidebar-nav {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 10px;
+    }
+
+    .sidebar-nav a {
+        border-right: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    .sidebar-nav a.active {
+        border-bottom-color: var(--primary-blue);
+    }
+}
+
+@media (max-width: 600px) {
+    .header-main-content {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .reservation-header,
+    .suggested-header,
+    .table-legend {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .suggested-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.venue-detail-page {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+    font-family: Dana, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Content */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.breadcrumbs {
+    display: flex;
+    gap: 8px;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+}
+
+.breadcrumbs a {
+    color: #009df8;
+    text-decoration: none;
+}
+
+.title-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.title-area h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+.rating-badge {
+    background: #ffc107;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.venue-mini-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn-blue-edit {
+    background: #4facfe;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(79, 172, 254, 0.3);
+}
+
+/* Gallery */
+.venue-gallery {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    overflow-x: auto;
+}
+
+.img-box {
+    /* flex: 0 0 230px; */
+    height: 150px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Body Area */
+.venue-body {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.sidebar {
+    width: 250px;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.sidebar-nav li {
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-nav a {
+    display: block;
+    padding: 15px 20px;
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: right;
+}
+
+.sidebar-nav li.active a {
+    color: #009df8;
+    border-right: 4px solid #009df8;
+    font-weight: bold;
+}
+
+.main-info {
+    flex: 1;
+}
+
+.info-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: right;
+}
+
+.info-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.description {
+    line-height: 2;
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.spec-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    direction: rtl;
+}
+
+.tag {
+    background: #333;
+    color: #fff;
+    padding: 6px 15px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.tag.more {
+    background: #666;
+    cursor: pointer;
+}
+
+/* Reservation Table */
+.reservation-box {
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.res-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.res-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+}
+
+.icon-calendar {
+    width: 24px;
+    color: #009df8;
+}
+
+.help-btn {
+    background: #f1f1f1;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.date-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 13px;
+    border-top: 1px solid #eee;
+}
+
+.res-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 13px;
+}
+
+.res-table th,
+.res-table td {
+    border: 1px solid #eee;
+    padding: 12px 5px;
+}
+
+.res-table th {
+    background: #fafafa;
+    color: #777;
+    font-weight: normal;
+}
+
+.td-reserved {
+    background: #fff5f5;
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.td-available {
+    background: #f0fff4;
+    color: #2e7d32;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Suggestions */
+.sug-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sug-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.sug-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.sug-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 15px;
+    text-align: right;
+}
+
+.card-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 15px;
+}
+
+.card-info p {
+    margin: 0;
+    color: #888;
+    font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+    .content-header,
+    .venue-body,
+    .res-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-right,
+    .title-area,
+    .spec-tags,
+    .card-info {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar-nav {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.res-section {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* Header */
+.res-top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.btn-help {
+    background: #f1f1f1;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #666;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.res-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.res-text-content {
+    text-align: right;
+}
+
+.res-text-content h3 {
+    font-size: 18px;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.res-text-content p {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+}
+
+.res-blue-icon {
+    background: #51A2FF;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.res-blue-icon svg {
+    width: 24px;
+}
+
+/* Date Navigation */
+.res-date-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #888;
+}
+
+.res-date-nav.bottom {
+    border-bottom: none;
+    margin-top: 10px;
+}
+
+.nav-next-week {
+    cursor: pointer;
+    color: #333;
+}
+
+/* Table Style */
+.res-table-container {
+    overflow-x: auto;
+}
+
+.res-main-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+}
+
+.res-main-table th,
+.res-main-table td {
+    border: 1px solid #f0f0f0;
+    padding: 15px 5px;
+    font-size: 13px;
+}
+
+.res-main-table th {
+    background: #fafafa;
+    color: #666;
+    font-weight: normal;
+    height: 70px;
+}
+
+.res-main-table th span {
+    font-size: 11px;
+    color: #aaa;
+}
+
+/* Columns */
+.col-time {
+    width: 100px;
+    font-weight: bold;
+}
+
+/* Cells Classes */
+.cell-past {
+    background: #fcfcfc;
+    color: #ddd;
+}
+
+.cell-empty {
+    background: #fff;
+}
+
+.cell-reserved {
+    background: #fff5f5;
+    color: #ff8a8a;
+    font-weight: bold;
+    border: 1px solid #ffeaea !important;
+}
+
+.cell-available {
+    background: #e8fdf0;
+    color: #4caf50;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cell-closed {
+    background: #f9f9f9;
+    color: #eee;
+}
+
+.cell-time {
+    background: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+}
+
+.cell-time span {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .res-top-header {
+        flex-direction: column-reverse;
+        gap: 15px;
+        align-items: flex-end;
+    }
+
+    .res-main-table {
+        font-size: 11px;
+    }
+
+    .col-time {
+        width: 70px;
+    }
+}
+
+/* کارت اصلی هدر */
+.venue-header-card {
+    background-color: #fff;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 25px 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    direction: rtl;
+}
+
+/* بخش سمت راست (عکس و متن) */
+.header-right-side {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.venue-avatar {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+}
+
+.venue-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+.venue-info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: right;
+}
+
+.venue-main-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+    margin: 0 0 10px 0;
+}
+
+.venue-sub-details {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.foot{
+    margin-top: 0;
+}
+
+.venue-address {
+    font-size: 16px;
+    color: #aaa;
+}
+
+/* بج زرد امتیاز */
+.venue-rating-badge {
+    background-color: #fbc02d;
+    /* رنگ زرد زنده مطابق عکس */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.star-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* بخش سمت چپ (دکمه آبی) */
+.header-left-side {
+    flex-shrink: 0;
+}
+
+.btn-reserve-large {
+    background: linear-gradient(135deg, #75befd 0%, #51a2ff 100%);
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 45px;
+    border-radius: 50px;
+    /* کاملاً گرد مطابق عکس */
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(81, 162, 255, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+}
+
+.btn-reserve-large:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(81, 162, 255, 0.4);
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 768px) {
+    .venue-header-card {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .header-right-side {
+        flex-direction: column;
+    }
+
+    .venue-info-text {
+        align-items: center;
+    }
+
+    .venue-sub-details {
+        justify-content: center;
+    }
+
+    .btn-reserve-large {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* --- بخش لیست اماکن (Suggestions) --- */
+.venues-list {
+    max-width: 1300px; /* هم‌تراز با بقیه بخش‌های سایت */
+    margin: 50px auto;
+    padding: 0 20px;
+    direction: rtl;
+}
+
+/* هدر بخش */
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.section-title-box h2 {
+    font-size: 22px;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.section-title-box .subtitle {
+    font-size: 14px;
+    color: #888;
+}
+
+.btn-more {
+    color: #009df8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.btn-more:hover {
+    color: #0072ff;
+}
+
+/* کانتینر کارت‌ها */
+.cards-wrapper {
+    display: grid;
+    /* چیدمان هوشمند: حداقل عرض هر کارت 280 پیکسل */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* استایل کارت تکی */
+.venue-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+.venue-card img {
+    width: 100%;
+    height: 20px;
+}
+
+.venue-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* تصویر کارت و اورلی */
+.card-img {
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    /* گرادینت تیره برای خوانایی متن روی عکس */
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 20px 15px 10px;
+    color: #fff;
+}
+
+.img-overlay h4 {
+    margin: 0 0 5px 0;
+    font-size: 17px;
+}
+
+.img-overlay .price {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* جزئیات پایین کارت (لوکیشن، جنسیت، امتیاز) */
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #666;
+}
+
+/* استایل آیکون‌های کوچک */
+.loc-icon, .gen-icon, .star-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.star-icon {
+    /* آیکون ستاره رو یه کم زردتر نشون بده */
+    filter: saturate(2);
+}
+
+.detail-item span {
+    white-space: nowrap;
+}
+
+/* --- ریسپانسیو برای موبایل --- */
+@media (max-width: 600px) {
+    .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .btn-more {
+        align-self: flex-end;
+    }
+
+    .card-img {
+        height: 180px;
+    }
+    
+    .cards-wrapper {
+        grid-template-columns: 1fr; /* کارت‌ها تک ستونه بشن */
+    }
+}
