@@ -52,6 +52,7 @@ body {
     border-radius: 8px;
     margin-bottom: 16px;
     box-sizing: border-box;
+    direction: rtl;
   }
   .button-group {
     display: flex;
