@@ -355,9 +355,57 @@ body {
 .loc-icon {
     width: 17px;
 }
+#hamburger{
+    display: none;
+}
+
+@media (max-width : 650px) {
+    .top-head{
+        display: none;
+    }
+    .bottom-head{
+        padding-bottom: 0;
+        padding-top: 20px;
+    }
+    .login{
+        display: none;
+    }
+    #hamburger{
+        display: inline-block;
+    }
+    .bottom-head{
+        width: 97.7%;
+    }
+}
+
 
 @media (max-width: 900px) {
     .search-section{
         margin-top: 2rem;
     }
+    .search-btn{
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width : 1230px) {
+        .cards-wrapper{
+        justify-content: center;
+    }
+}
+
+@media (max-width : 1320px) {
+    .banner-container{
+        margin: 0 30px;
+    }
+
+    .search-section{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .venues-list{
+        margin: 0 30px;
+    }
+
 }
