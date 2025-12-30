@@ -358,6 +358,9 @@ body {
 #hamburger{
     display: none;
 }
+#closeIcon{
+    display: none;
+}
 
 @media (max-width : 650px) {
     .top-head{
