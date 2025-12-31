@@ -1,242 +1,52 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ثبت نام</title>
     <link href="./css/sabtenam.css" rel="stylesheet" />
     <link rel="stylesheet" href="./styles/main.css">
     <style></style>
-  </head>
-  <body>
-    <header>
-        <div class="head">
-            <div class="top-head">
-                <div class="head-menu">
-                    <a class="link-item" href="faq.html">سوالات متداول</a>
-                    <a class="link-item" href="darbareh.html">درباره ما</a>
-                    <a class="link-item" href="tamas.html"> تماس با ما</a>
-                    <a class="link-item" href="#">فرآیند خرید</a>
-                </div>
-                <div class="ques-head">
-                    <a class="link-item ques" href="#">مجموعه ورزشی دارید؟</a>
-                    <a class="link-item ques" href="#">پیگیری خرید</a>
-                </div>
-            </div>
-            <div class="bottom-head">
-                <div class="logo">
-                    <a class="home" href="home.html">
-                        <img class="logo-icon" src="./images/stadium.jpg" alt="">
-                        <h1>سالن‌ یار</h1>
-                    </a>
-                </div>
+</head>
 
-                <div class="login">
-                    <div class="child-login">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="login-icon">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
-                        </svg>
-                        <a class="login-link" href="sabtenam.html">
-                            <span>ثبت نام</span>
-                            <span>/</span>
-                            <span>ورود</span>
-                        </a>
-                    </div>
-                    <div class="number">
-                        <p class="number-main">025-32689439</p>
-                    </div>
-                </div>
-                <div id="hamburger" style="width:30px;cursor:pointer">
-                    <div style="height:4px;background:#000;margin:6px 0"></div>
-                    <div style="height:4px;background:#000;margin:6px 0"></div>
-                    <div style="height:4px;background:#000;margin:6px 0"></div>
-                </div>
-                <div id="closeIcon" style="width:30px;cursor:pointer;position:relative;height:30px">
-                    <div
-                        style="height:4px;background:#000;position:absolute;top:13px;width:30px;transform:rotate(45deg)">
-                    </div>
-                    <div
-                        style="height:4px;background:#000;position:absolute;top:13px;width:30px;transform:rotate(-45deg)">
-                    </div>
-                </div>
-
-
-
-            </div>
+<body>  
+        <div class="container">
+        <div class="logo-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="logo1">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </svg>
         </div>
-        <div class="menu-phone-mobile">
-            <a class="link-item" href="faq.html">سوالات متداول</a>
-            <a class="link-item" href="darbareh.html">درباره ما</a>
-            <a class="link-item" href="tamas.html"> تماس با ما</a>
-            <a class="link-item" href="#">فرآیند خرید</a>
-            <a class="link-item ques" href="#">مجموعه ورزشی دارید؟</a>
-            <a class="link-item ques" href="#">پیگیری خرید</a>
-            <div class="child-login">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="login-icon">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
-                </svg>
-                <a class="login-link" href="sabtenam.html">
-                    <span>ثبت نام</span>
-                    <span>/</span>
-                    <span>ورود</span>
+        <div class="title">ثبت نام</div>
+        <div class="subtitle">به خانواده بزرگ سالن یار بپیوندید</div>
+
+        <form action="" method="post">
+            <input type="tel" id="code" name="code" placeholder="شماره همراه" />
+
+            <input type="text" id="code" name="code" placeholder="نام و نام خانوادگی" />
+            <input type="password" id="code" name="code" placeholder="رمز عبور" />
+            <input type="password" id="code" name="code" placeholder="تکرار رمز عبور" />
+
+            <div class="button-group">
+                <button type="button" class="btn btn-secondary">بازگشت</button>
+                <a href="/ozviat.html" style="text-align: center; text-decoration: none;" type="submit" class="btn btn-primary">
+                    عضویت<span class="arrow"></span>
                 </a>
             </div>
-
-        </div>
-    </header>
-    <div class="container">
-      <div class="logo-2">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="logo1"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-          />
-        </svg>
-      </div>
-      <div class="title">ثبت نام</div>
-      <div class="subtitle">به خانواده بزرگ سالن یار بپیوندید</div>
-
-      <form action="" method="post">
-        <input type="text" id="code" name="code" placeholder="شماره همراه" />
-
-        <input
-          type="text"
-          id="code"
-          name="code"
-          placeholder="نام و نام خانوادگی"
-        />
-        <input type="text" id="code" name="code" placeholder="رمز عبور" />
-        <input type="text" id="code" name="code" placeholder="تکرار رمز عبور" />
-
-        <div class="button-group">
-          <button type="button" class="btn btn-secondary">بازگشت</button>
-          <button type="submit" class="btn btn-primary">
-            عضویت<span class="arrow">›</span>
-          </button>
-        </div>
-      </form>
-      <!-- بخش جدید اضافه شده -->
-      <div class="login-prompt">
-        <span>حساب کاربری دارید؟</span>
-        <a href="vorod.html" class="login-link-form">ورود</a>
-      </div>
-    </div> <!-- پایان کانتینر -->
-
-    </div>
-    <footer>
-        <div class="foot">
-
-            <div class="discription-1">
-                <div class="support">
-                    <h3 class="support-text">
-                        ساعت پاسخگویی و پشتیبانی <span class="black">مرجع رزرو و اجاره اماکن ورزشی (سالن‌ یار)</span>،
-                        از 8 صبح تا 12:30 بامداد
-                    </h3>
-                    <div class="number-footer">
-                        <p class="number-footer-main">
-                            <span class="color-num">025</span>-32689439
-                        </p>
-                    </div>
-                </div>
-            </div>
+        </form>
+        <!-- بخش جدید اضافه شده -->
+        <div class="login-prompt">
+            <span>حساب کاربری دارید؟</span>
+            <a href="vorod.html" class="login-link-form">ورود</a>
+        </div></div>
+ <!-- پایان کانتینر -->
 
 
-            <div class="discirption-2">
-                <div class="content-dis-2">
-                    <div class="city_are">
-                        <h3 class="city-text">شهر های تحت پوشش</h3>
-                    </div>
-                    <div class="city-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="city-icon-main">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5" />
-                        </svg>
-                    </div>
-                    <div class="city-name">
-                        <p class="qom">قم</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- بخش اصلاح‌شده -->
-            <div class="discription-3">
-                <div class="footer-sections">
-
-                    <!-- ستون اول -->
-                    <div class="footer-box">
-                        <div class="green-line"></div>
-                        <div class="first-text">
-                            <h3>سالن یار چیست؟</h3>
-                            <p class="first-main-text">
-                                سالن یار راهکاری سریع و آنلاین برای رزرو و اجاره اماکن ورزشی–تفریحی در سطح کشور می‌
-                                آفریند است.
-
-                                آغاز نموده است.
-
-                                ما مفتخریم که امکان رزرو و اجاره اماکن ورزشی را به صورت سریع و آسان و بدون
-                                پرداخت هیچگونه هزینه اضافی برای تمام ورزش‌کاران و ورزش‌ دوستان گرامی فراهم
-                                نماییم.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- ستون دوم -->
-                    <div class="footer-box aa">
-                        <div class="purple-line"></div>
-                        <div class="twice-text">
-                            <h3>اطلاعات</h3>
-                            <a href="darbareh.html" class="information for-height">درباره ما</a>
-                            <a href="#" class="information for-height">شرایط و قوانین</a>
-                            <a href="#" class="information for-height">مناطق تحت پوشش</a>
-                            <a href="/dashbord.html" class="information for-height">داشبورد</a>
-                        </div>
-                    </div>
-
-                    <!-- ستون سوم -->
-                    <div class="footer-box bb">
-                        <div class="yellow-line"></div>
-                        <div class="third-text">
-                            <h3>کاربران</h3>
-                            <a href="#" class="users for-height">ثبت مکان ورزشی</a>
-                            <a href="tamas.html" class="users for-height">سوالات متداول</a>
-                            <a href="tamas.html" class="users for-height">تماس با ما</a>
-                            <a href="#" class="users for-height">فرایند خرید</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="discription-4">
-                <div class="final-sum">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="copyright">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                    </svg>
-
-                    <p class="final-sum-text">تمامی حقوق برای سالن یار محفوظ است</p>
-                </div>
-                <div class="final-icons">
-                    <img src="./images/enamad_icon__text_color_blue_1024.png" alt="enemad" class="enemad">
-                </div>
-            </div>
-        </div>
-    </footer>
     <script src="/Javascript/menu.js"></script>
 
-  </body>
+</body>
+
 </html>
