@@ -394,16 +394,6 @@ body {
         /* سایدبار بره بالای همه */
     }
 
-    .sidebar-nav {
-        display: flex;
-        justify-content: space-around;
-        padding: 0 10px;
-    }
-
-    .sidebar-nav a {
-        border-right: none;
-        border-bottom: 3px solid transparent;
-    }
 
     .sidebar-nav a.active {
         border-bottom-color: var(--primary-blue);
@@ -749,13 +739,13 @@ body {
         text-align: center;
     }
 
-    .header-right,
+    /* .header-right,
     .title-area,
     .spec-tags,
     .card-info {
         justify-content: center;
         text-align: center;
-    }
+    } */
 
     .sidebar {
         width: 100%;
@@ -764,6 +754,13 @@ body {
     .sidebar-nav {
         display: flex;
         justify-content: space-around;
+    }
+
+    .sidebar-nav li.active a{
+        border-right: none;
+    }
+    .sidebar-nav a:hover{
+        border-right: none;
     }
 }
 
@@ -1006,7 +1003,8 @@ body {
     gap: 15px;
     flex-wrap: wrap;
 }
-.foot{
+
+.foot {
     margin-top: 0;
 }
 
@@ -1066,6 +1064,16 @@ body {
         gap: 20px;
     }
 
+    .res-top-header {
+        flex-direction: row;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .res-top-header p {
+        display: none;
+    }
+
     .header-right-side {
         flex-direction: column;
     }
@@ -1083,9 +1091,11 @@ body {
         text-align: center;
     }
 }
+
 /* --- بخش لیست اماکن (Suggestions) --- */
 .venues-list {
-    max-width: 1300px; /* هم‌تراز با بقیه بخش‌های سایت */
+    max-width: 1300px;
+    /* هم‌تراز با بقیه بخش‌های سایت */
     margin: 50px auto;
     padding: 0 20px;
     direction: rtl;
@@ -1141,6 +1151,7 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
+
 .venue-card img {
     width: 100%;
     height: 20px;
@@ -1203,7 +1214,9 @@ body {
 }
 
 /* استایل آیکون‌های کوچک */
-.loc-icon, .gen-icon, .star-icon {
+.loc-icon,
+.gen-icon,
+.star-icon {
     width: 16px;
     height: 16px;
     object-fit: contain;
@@ -1218,14 +1231,24 @@ body {
     white-space: nowrap;
 }
 
-/* --- ریسپانسیو برای موبایل --- */
+.venue-gallery {
+    scroll-snap-type: x mandatory;
+}
+
+.venue-gallery img {
+    scroll-snap-align: start;
+}
+
+
+
+
 @media (max-width: 600px) {
     .section-head {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
     }
-    
+
     .btn-more {
         align-self: flex-end;
     }
@@ -1233,8 +1256,112 @@ body {
     .card-img {
         height: 180px;
     }
-    
+
     .cards-wrapper {
-        grid-template-columns: 1fr; /* کارت‌ها تک ستونه بشن */
+        grid-template-columns: 1fr;
+        /* کارت‌ها تک ستونه بشن */
+    }
+
+    .venue-gallery {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    .res-table-container {
+        overflow: visible;
+    }
+
+    .res-main-table thead {
+        display: none;
+    }
+
+    .res-main-table,
+    .res-main-table tbody,
+    .res-main-table tr,
+    .res-main-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .res-main-table tr {
+        margin-bottom: 25px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e0e0e0;
+        overflow: hidden;
+    }
+
+    .res-main-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        border: none;
+        border-bottom: 1px solid #f0f0f0;
+        text-align: left;
+        min-height: 45px;
+    }
+
+    .res-main-table td:last-child {
+        border-bottom: none;
+    }
+
+    .res-main-table td.cell-time {
+        background: linear-gradient(to left, #009df8, #007bff);
+        color: #fff;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .res-main-table td.cell-time span {
+        color: #fff !important;
+        font-size: 16px;
+    }
+
+    .res-main-table td:not(.cell-time)::after {
+        content: attr(class);
+        display: none;
+    }
+
+    .res-main-table td:not(.cell-time)::before {
+        font-weight: bold;
+        color: #555;
+        font-size: 13px;
+    }
+
+    .res-main-table td:nth-of-type(2)::before {
+        content: "شنبه";
+    }
+
+    .res-main-table td:nth-of-type(3)::before {
+        content: "یکشنبه";
+    }
+
+    .res-main-table td:nth-of-type(4)::before {
+        content: "دوشنبه";
+    }
+
+    .res-main-table td:nth-of-type(5)::before {
+        content: "سه‌شنبه";
+    }
+
+    .res-main-table td:nth-of-type(6)::before {
+        content: "چهارشنبه";
+    }
+
+    .res-main-table td:nth-of-type(7)::before {
+        content: "پنجشنبه";
+    }
+
+    .res-main-table td:nth-of-type(8)::before {
+        content: "جمعه";
     }
 }
