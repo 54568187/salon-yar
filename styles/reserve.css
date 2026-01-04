@@ -510,7 +510,7 @@ body {
 }
 
 .img-box {
-    /* flex: 0 0 230px; */
+    flex: 0 0 230px;
     height: 150px;
     width: 100%;
     border-radius: 8px;
@@ -739,13 +739,6 @@ body {
         text-align: center;
     }
 
-    /* .header-right,
-    .title-area,
-    .spec-tags,
-    .card-info {
-        justify-content: center;
-        text-align: center;
-    } */
 
     .sidebar {
         width: 100%;
@@ -1263,7 +1256,7 @@ body {
     }
 
     .venue-gallery {
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
     }
 }
 
