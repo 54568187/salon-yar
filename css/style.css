@@ -1,0 +1,201 @@
+/* تنظیمات کلی صفحه */
+body {
+    background-color: #f5f5f5; /* هماهنگ با تم کلی */
+}
+
+.reg-main {
+    padding: 40px 20px;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.reg-container {
+    background: #fff;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    padding: 40px;
+    border: 1px solid #e0e0e0;
+}
+
+/* هدر فرم */
+.reg-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 20px;
+}
+
+.reg-header h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.reg-header p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* استایل بخش‌های فرم */
+.form-section {
+    margin-bottom: 35px;
+    padding: 20px;
+    background: #fcfcfc;
+    border-radius: 12px;
+    border: 1px solid #eee;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    color: #000;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    border-right: 4px solid #000; /* رنگ مشکی مشابه لوگو */
+}
+
+/* گرید بندی ورودی ها */
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+/* لیبل ها و اینپوت ها */
+label {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #444;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #000;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* چک‌باکس‌ها */
+.checkbox-group-wrapper {
+    margin-top: 20px;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.checkbox-grid label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    cursor: pointer;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    transition: 0.2s;
+}
+
+.checkbox-grid label:hover {
+    border-color: #bbb;
+}
+
+.checkbox-grid input[type="checkbox"] {
+    margin-left: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+/* باکس آپلود عکس */
+.upload-box {
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #666;
+}
+
+.upload-box:hover {
+    border-color: #000;
+    background: #fafafa;
+    color: #000;
+}
+
+/* دکمه ارسال */
+.form-actions {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.submit-btn {
+    background-color: #000; /* رنگ اصلی سایت */
+    color: #fff;
+    padding: 15px 50px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.submit-btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    .input-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .reg-container {
+        padding: 20px;
+    }
+}

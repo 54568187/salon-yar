@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>ثبت مجموعه ورزشی | رزرو اسپورت</title>
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <div class="top-head">
+                <div class="head-menu">
+                    <a class="link-item" href="faq.html">سوالات متداول</a>
+                    <a class="link-item" href="darbareh.html">درباره ما</a>
+                    <a class="link-item" href="tamas.html"> تماس با ما</a>
+                    <a class="link-item" href="#">فرآیند خرید</a>
+                </div>
+                <div class="ques-head">
+                    <a class="link-item ques" href="#">مجموعه ورزشی دارید؟</a>
+                    <a class="link-item ques" href="#">پیگیری خرید</a>
+                </div>
+            </div>
+            <div class="bottom-head">
+                <div class="logo">
+                    <a class="home" href="home.html">
+                        <img class="logo-icon" src="./images/logo-removebg-preview.png" alt="">
+                        <h1>رزرو اسپورت</h1>
+                    </a>
+                </div>
+
+                <div class="login">
+                    <div class="child-login">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="login-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+                        </svg>
+                        <a class="login-link" href="sabtenam.html">
+                            <span>ثبت نام</span>
+                            <span>/</span>
+                            <span>ورود</span>
+                        </a>
+                    </div>
+                    <div class="number">
+                        <p class="number-main">025-32689439</p>
+                    </div>
+                </div>
+                <div id="hamburger" style="width:30px;cursor:pointer">
+                    <div style="height:4px;background:#000;margin:6px 0"></div>
+                    <div style="height:4px;background:#000;margin:6px 0"></div>
+                    <div style="height:4px;background:#000;margin:6px 0"></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-phone-mobile">
+            <a class="link-item" href="faq.html">سوالات متداول</a>
+            <a class="link-item" href="darbareh.html">درباره ما</a>
+            <a class="link-item" href="tamas.html"> تماس با ما</a>
+            <a class="link-item" href="#">فرآیند خرید</a>
+            <a class="link-item ques" href="#">مجموعه ورزشی دارید؟</a>
+        </div>
+    </header>
+
+    <main class="reg-main">
+        <div class="reg-container">
+            <div class="reg-header">
+                <h2>ثبت مجموعه ورزشی</h2>
+                <p>با پیوستن به رزرو اسپورت، درآمد مجموعه خود را افزایش دهید و مدیریت سانس‌ها را آسان کنید.</p>
+            </div>
+
+            <form action="#" method="post" class="venue-form">
+                
+                <div class="form-section">
+                    <h3 class="section-title">اطلاعات کلی مجموعه</h3>
+                    <div class="input-grid">
+                        <div class="form-group">
+                            <label for="venue-name">نام مجموعه ورزشی:</label>
+                            <input type="text" id="venue-name" name="venue-name" placeholder="مثال: سالن ورزشی تختی" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="manager-name">نام و نام خانوادگی مدیر:</label>
+                            <input type="text" id="manager-name" name="manager-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">شماره تماس مجموعه:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="025-xxxxxxxx" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">شماره همراه مدیر (جهت احراز هویت):</label>
+                            <input type="tel" id="mobile" name="mobile" placeholder="09xxxxxxxxx" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="section-title">موقعیت مکانی</h3>
+                    <div class="input-grid">
+                        <div class="form-group">
+                            <label for="city">شهر:</label>
+                            <select id="city" name="city">
+                                <option value="qom">قم</option>
+                                <option value="tehran">تهران</option>
+                                </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="address">آدرس دقیق:</label>
+                            <textarea id="address" name="address" rows="2" placeholder="مثال: بلوار امین، کوچه 12، پلاک 4"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="section-title">امکانات و رشته‌ها</h3>
+                    
+                    <div class="form-group">
+                        <label>نوع مجموعه:</label>
+                        <select name="type">
+                            <option value="salon">سالن چند منظوره</option>
+                            <option value="grass">چمن مصنوعی/طبیعی</option>
+                            <option value="pool">استخر</option>
+                            <option value="gym">باشگاه بدنسازی</option>
+                        </select>
+                    </div>
+
+                    <div class="checkbox-group-wrapper">
+                        <label>رشته‌های ورزشی فعال:</label>
+                        <div class="checkbox-grid">
+                            <label><input type="checkbox" name="sports" value="futsal"> فوتسال</label>
+                            <label><input type="checkbox" name="sports" value="volleyball"> والیبال</label>
+                            <label><input type="checkbox" name="sports" value="basketball"> بسکتبال</label>
+                            <label><input type="checkbox" name="sports" value="handball"> هندبال</label>
+                            <label><input type="checkbox" name="sports" value="badminton"> بدمینتون</label>
+                            <label><input type="checkbox" name="sports" value="wrestling"> کشتی</label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-group-wrapper">
+                        <label>امکانات رفاهی:</label>
+                        <div class="checkbox-grid">
+                            <label><input type="checkbox" name="facilities" value="parking"> پارکینگ</label>
+                            <label><input type="checkbox" name="facilities" value="shower"> دوش آب گرم</label>
+                            <label><input type="checkbox" name="facilities" value="locker"> رختکن مجزا</label>
+                            <label><input type="checkbox" name="facilities" value="buffet"> بوفه</label>
+                            <label><input type="checkbox" name="facilities" value="cooling"> سیستم سرمایش/گرمایش</label>
+                            <label><input type="checkbox" name="facilities" value="spectator"> جایگاه تماشاچی</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="section-title">تصاویر و توضیحات تکمیلی</h3>
+                    <div class="form-group full-width">
+                        <label for="description">توضیحات و قوانین مجموعه:</label>
+                        <textarea id="description" name="description" rows="4" placeholder="قوانین خاص، سانس‌های بانوان/آقایان و ..."></textarea>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label class="upload-label" for="venue-images">
+                            <div class="upload-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:40px;height:40px;margin-bottom:10px;">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
+                                </svg>
+                                <span>بارگذاری تصاویر مجموعه (حداکثر 5 عکس)</span>
+                            </div>
+                            <input type="file" id="venue-images" name="venue-images" multiple accept="image/*" style="display:none;">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">ثبت اطلاعات مجموعه</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="foot">
+            <div class="discription-1">
+                <div class="support">
+                    <h3 class="support-text">
+                        ساعت پاسخگویی و پشتیبانی <span class="black">مرجع رزرو و اجاره اماکن ورزشی (رزرو اسپورت)</span>،
+                        از 8 صبح تا 12:30 بامداد
+                    </h3>
+                    <div class="number-footer">
+                        <p class="number-footer-main">
+                            <span class="color-num">025</span>-32689439
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="discirption-2">
+                <div class="content-dis-2">
+                    <div class="city_are">
+                        <h3 class="city-text">شهر های تحت پوشش</h3>
+                    </div>
+                    <div class="city-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="city-icon-main">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5" />
+                        </svg>
+                    </div>
+                    <div class="city-name">
+                        <p class="qom">قم</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="discription-3">
+                <div class="footer-sections">
+                    <div class="footer-box">
+                        <div class="green-line"></div>
+                        <div class="first-text">
+                            <h3>رزرو اسپورت چیست؟</h3>
+                            <p class="first-main-text">
+                                رزرو اسپورت راهکاری سریع و آنلاین برای رزرو و اجاره اماکن ورزشی–تفریحی در سطح کشور است.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer-box aa">
+                        <div class="purple-line"></div>
+                        <div class="twice-text">
+                            <h3>اطلاعات</h3>
+                            <a href="darbareh.html" class="information for-height">درباره ما</a>
+                            <a href="#" class="information for-height">شرایط و قوانین</a>
+                            <a href="#" class="information for-height">مناطق تحت پوشش</a>
+                            <a href="/dashbord.html" class="information for-height">داشبورد</a>
+                        </div>
+                    </div>
+                    <div class="footer-box bb">
+                        <div class="yellow-line"></div>
+                        <div class="third-text">
+                            <h3>کاربران</h3>
+                            <a href="register-venue.html" class="users for-height">ثبت مکان ورزشی</a>
+                            <a href="tamas.html" class="users for-height">سوالات متداول</a>
+                            <a href="tamas.html" class="users for-height">تماس با ما</a>
+                            <a href="#" class="users for-height">فرایند خرید</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="discription-4">
+                <div class="final-sum">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="copyright">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <p class="final-sum-text">تمامی حقوق برای رزرو اسپورت محفوظ است</p>
+                </div>
+                <div class="final-icons">
+                    <img src="./images/enamad_icon__text_color_blue_1024.png" alt="enemad" class="enemad">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/Javascript/menu.js"></script>
+</body>
+</html>
