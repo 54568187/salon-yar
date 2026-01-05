@@ -327,6 +327,15 @@ h1 {
 .menu-phone-mobile {
     display: none;
 }
+.account{
+    align-items: flex-start;
+    display: none;
+}
+
+.account-icon {
+    width: 20px;
+    margin-left: 5px;
+}
 
 @media (max-width : 650px) {
     .top-head {
