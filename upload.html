@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <title>ثبت مجموعه ورزشی | رزرو اسپورت</title>
+    <link rel="shortcut icon" href="/images/logo-removebg-preview.png" type="image/x-icon">
+
 </head>
 
 <body>
@@ -20,8 +22,8 @@
                     <a class="link-item" href="#">فرآیند خرید</a>
                 </div>
                 <div class="ques-head">
-                    <a class="link-item ques" href="#">مجموعه ورزشی دارید؟</a>
-                    <a class="link-item ques" href="#">پیگیری خرید</a>
+                    <a class="link-item ques" href="/upload.html">مجموعه ورزشی دارید؟</a>
+                    <a class="link-item ques" href="/dashbord.html">پیگیری خرید</a>
                 </div>
             </div>
             <div class="bottom-head">
@@ -45,6 +47,18 @@
                             <span>ورود</span>
                         </a>
                     </div>
+                    <div class="child-login account">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="account-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+
+                        <a class="login-link" href="sabtenam.html">
+                            <span>نمایه</span>
+                            <span>کاربری</span>
+                        </a>
+                    </div>
                     <div class="number">
                         <p class="number-main">025-32689439</p>
                     </div>
@@ -54,17 +68,54 @@
                     <div style="height:4px;background:#000;margin:6px 0"></div>
                     <div style="height:4px;background:#000;margin:6px 0"></div>
                 </div>
+                <div id="closeIcon" style="width:30px;cursor:pointer;position:relative;height:30px">
+                    <div
+                        style="height:4px;background:#000;position:absolute;top:13px;width:30px;transform:rotate(45deg)">
+                    </div>
+                    <div
+                        style="height:4px;background:#000;position:absolute;top:13px;width:30px;transform:rotate(-45deg)">
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
         <div class="menu-phone-mobile">
             <a class="link-item" href="faq.html">سوالات متداول</a>
             <a class="link-item" href="darbareh.html">درباره ما</a>
             <a class="link-item" href="tamas.html"> تماس با ما</a>
-            <a class="link-item" href="#">فرآیند خرید</a>
-            <a class="link-item ques" href="#">مجموعه ورزشی دارید؟</a>
+            <a class="link-item" href="/dashbord.html">فرآیند خرید</a>
+            <a class="link-item ques" href="/upload.html">مجموعه ورزشی دارید؟</a>
+            <a class="link-item ques" href="/dashbord.html">پیگیری خرید</a>
+            <div class="child-login">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="login-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+                </svg>
+                <a class="login-link" href="sabtenam.html">
+                    <span>ثبت نام</span>
+                    <span>/</span>
+                    <span>ورود</span>
+                </a>
+            </div>
+
+            <div class="child-login account">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="account-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+
+                <a class="login-link" href="sabtenam.html">
+                    <span>نمایه</span>
+                    <span>کاربری</span>
+                </a>
+            </div>
+
         </div>
     </header>
-
     <main class="reg-main">
         <div class="reg-container">
             <div class="reg-header">
@@ -73,13 +124,14 @@
             </div>
 
             <form action="#" method="post" class="venue-form">
-                
+
                 <div class="form-section">
                     <h3 class="section-title">اطلاعات کلی مجموعه</h3>
                     <div class="input-grid">
                         <div class="form-group">
                             <label for="venue-name">نام مجموعه ورزشی:</label>
-                            <input type="text" id="venue-name" name="venue-name" placeholder="مثال: سالن ورزشی تختی" required>
+                            <input type="text" id="venue-name" name="venue-name" placeholder="مثال: سالن ورزشی تختی"
+                                required>
                         </div>
                         <div class="form-group">
                             <label for="manager-name">نام و نام خانوادگی مدیر:</label>
@@ -103,26 +155,26 @@
                             <label for="city">شهر:</label>
                             <select id="city" name="city">
                                 <option value="qom">قم</option>
-                                <option value="tehran">تهران</option>
-                                </select>
+                            </select>
                         </div>
                         <div class="form-group full-width">
                             <label for="address">آدرس دقیق:</label>
-                            <textarea id="address" name="address" rows="2" placeholder="مثال: بلوار امین، کوچه 12، پلاک 4"></textarea>
+                            <textarea id="address" name="address" rows="2"
+                                placeholder="مثال: بلوار امین، کوچه 12، پلاک 4"></textarea>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-section">
                     <h3 class="section-title">امکانات و رشته‌ها</h3>
-                    
+
                     <div class="form-group">
                         <label>نوع مجموعه:</label>
                         <select name="type">
                             <option value="salon">سالن چند منظوره</option>
-                            <option value="grass">چمن مصنوعی/طبیعی</option>
-                            <option value="pool">استخر</option>
-                            <option value="gym">باشگاه بدنسازی</option>
+                            <option value="grass" disabled>چمن مصنوعی/طبیعی</option>
+                            <option value="pool" disabled>استخر</option>
+                            <option value="gym" disabled>باشگاه بدنسازی</option>
                         </select>
                     </div>
 
@@ -155,18 +207,23 @@
                     <h3 class="section-title">تصاویر و توضیحات تکمیلی</h3>
                     <div class="form-group full-width">
                         <label for="description">توضیحات و قوانین مجموعه:</label>
-                        <textarea id="description" name="description" rows="4" placeholder="قوانین خاص، سانس‌های بانوان/آقایان و ..."></textarea>
+                        <textarea id="description" name="description" rows="4"
+                            placeholder="قوانین خاص، سانس‌های بانوان/آقایان و ..."></textarea>
                     </div>
-                    
+
                     <div class="form-group full-width">
                         <label class="upload-label" for="venue-images">
                             <div class="upload-box">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:40px;height:40px;margin-bottom:10px;">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor"
+                                    style="width:40px;height:40px;margin-bottom:10px;">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5" />
                                 </svg>
                                 <span>بارگذاری تصاویر مجموعه (حداکثر 5 عکس)</span>
                             </div>
-                            <input type="file" id="venue-images" name="venue-images" multiple accept="image/*" style="display:none;">
+                            <input type="file" id="venue-images" name="venue-images" multiple accept="image/*"
+                                style="display:none;">
                         </label>
                     </div>
                 </div>
@@ -264,4 +321,5 @@
     </footer>
     <script src="/Javascript/menu.js"></script>
 </body>
+
 </html>
