@@ -337,6 +337,85 @@ h1 {
     margin-left: 5px;
 }
 
+.notification-wrapper {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in-out;
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+#notifyBtn {
+    background: inherit;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    font-family: Dana;
+}
+
+#notifyBtn:hover {
+    background-color: #dadada;
+}
+
+/* باکس اعلان */
+.notify-box {
+    display: none;
+    /* اول مخفی */
+    position: absolute;
+    top: 120%;
+    /* کمی پایین‌تر از دکمه */
+    left: 0;
+    background-color: #fff;
+    padding: 12px 18px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    min-width: 310px;
+    /* min-height: 150px; */
+    height: fit-content;
+    z-index: 50;
+    font-size: 14px;
+    color: #333;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.none {
+    line-height: 50px;
+}
+
+.succes {
+    color: #22fd51;
+    text-decoration: none;
+    margin-bottom: 10px;
+    line-height: 50px;
+    display: none;
+}
+
+.fail {
+    color: #ff2b2b;
+    text-decoration: none;
+    display: none;
+    line-height: 50px;
+}
+
+/* وقتی نمایش داده شد */
+.notify-box.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile {
+    display: none;
+}
+
 @media (max-width : 650px) {
     .top-head {
         display: none;
@@ -390,5 +469,52 @@ h1 {
 
     .child-login:hover {
         background-color: inherit;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .notification-wrapper {
+        background-color: inherit;
+        color: white;
+        justify-content: flex-start;
+        margin-top: -15px;
+    }
+    #notifyBtn{
+        color: white;
+        padding-right: 0;
+    }
+    #notifyBtn:hover{
+        background-color: inherit;
+    }
+    .menu-phone-mobile .notification-wrapper {
+        position: relative; /* نوتیف در منو */
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-phone-mobile .notify-box {
+        position: fixed;       
+        top: 500px;             
+        right: 20px;           
+        left: auto;            
+        z-index: 9999;         
+        width: 90%;            
+        max-width: 350px;      
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        display: none;         /* اول مخفی */
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    /* وقتی نمایش داده شد */
+    .menu-phone-mobile .notify-box.show {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
     }
 }
