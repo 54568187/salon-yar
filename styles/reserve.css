@@ -1599,3 +1599,176 @@ body {
         width: 100%;
     }
 }
+/* باکس اصلی سفید و تمیز که همه کامنت‌ها توش هستن */
+.comments-list {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* فاصله ها توسط wrapper کنترل میشه */
+}
+
+/* نگهدارنده هر مکالمه */
+.comment-wrapper {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+.comment-wrapper:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* استایل پایه هر آیتم کامنت */
+.comment-item {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #f0f0f0; /* بوردر پیش فرض */
+    background: #fff;
+    transition: all 0.2s;
+}
+
+/* --- استایل‌های اختصاصی ادمین و سوپر ادمین (طبق درخواستت) --- */
+.comment-item.admin-comment {
+    border: 2px solid #2e7d32;
+    background-color: #f6fbf6;
+}
+
+.comment-item.super-admin-comment {
+    border: 2px solid #d32f2f;
+    background-color: #fffafa;
+}
+/* ----------------------------------------------------------- */
+
+.c-avatar {
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+}
+
+.c-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.c-content {
+    flex: 1;
+}
+
+.c-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.c-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.c-date {
+    font-size: 12px;
+    color: #999;
+    margin-right: auto;
+}
+
+.c-badge {
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #fff;
+}
+.c-badge.green { background-color: #2e7d32; }
+.c-badge.red { background-color: #d32f2f; }
+
+.c-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+    margin: 0 0 10px 0;
+    text-align: justify;
+}
+
+/* دکمه ریپلای شیک */
+.btn-reply {
+    background: transparent;
+    border: 1px solid #e0e0e0;
+    color: #666;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.btn-reply:hover {
+    background-color: var(--primary-blue);
+    color: #fff;
+    border-color: var(--primary-blue);
+}
+
+/* کانتینر پاسخ‌ها (فرزندان) */
+.reply-container {
+    margin-top: 20px;
+    margin-right: 50px; /* فاصله درختی */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+/* خط اتصال درختی (اختیاری برای زیبایی) */
+.reply-container::before {
+    content: '';
+    position: absolute;
+    right: -25px;
+    top: 0;
+    bottom: 20px;
+    width: 2px;
+    background-color: #eee;
+}
+
+.reply-meta {
+    font-size: 11px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.reply-meta svg {
+    transform: scaleX(-1);
+    color: #ccc;
+}
+
+/* ریسپانسیو */
+@media (max-width: 576px) {
+    .reply-container {
+        margin-right: 20px;
+    }
+    .reply-container::before {
+        right: -10px;
+    }
+}
