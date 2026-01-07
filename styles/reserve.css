@@ -1772,3 +1772,37 @@ body {
         right: -10px;
     }
 }
+/* استایل دکمه گزارش - پایین سمت چپ */
+.btn-report {
+    position: absolute;
+    left: 25px; /* فاصله از چپ - هماهنگ با پدینگ باکس */
+    bottom: 25px; /* فاصله از پایین - هماهنگ با پدینگ باکس */
+    background: transparent;
+    border: none;
+    color: #ccc; /* رنگ پیش‌فرض خاکستری */
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    z-index: 5;
+}
+
+.btn-report svg {
+    width: 16px;
+    height: 16px;
+}
+
+.btn-report:hover {
+    color: #d32f2f; /* قرمز شدن هنگام هاور */
+}
+
+/* در موبایل کمی فاصله را تنظیم کنیم */
+@media (max-width: 768px) {
+    .btn-report {
+        left: 15px;
+        bottom: 15px;
+    }
+}
